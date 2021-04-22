@@ -1,4 +1,4 @@
 package Queries;
 
-public class Querie {
+public class Query {
 }

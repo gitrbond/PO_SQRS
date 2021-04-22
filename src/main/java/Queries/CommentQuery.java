@@ -7,7 +7,7 @@ import Databases.Database;
 import java.util.Collection;
 
 
-public class CommentQuerie implements Query<Comment> {
+public class CommentQuery implements Query<Comment> {
     private final Database<Post, Comment> database;
     private final Post key;
 

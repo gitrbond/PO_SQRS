@@ -1,3 +1,5 @@
+package Queries;
+
 import Entities.Entity;
 
 public class LikeQuery {

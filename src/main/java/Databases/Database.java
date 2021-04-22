@@ -1,3 +1,5 @@
+package Databases;
+
 import java.util.Collection;
 
 public interface Database<K, V> {

@@ -1,21 +1,24 @@
+package Entities;
+
 public class Post implements Entity {
+    private final String authorId;
+    private final String postId;
     private int likesCount;
-    private final String id;
     private final String postContent;
 
-    Post(String id, String postContent) {
+    Post(String postId, String authorId, String postContent) {
+        this.postId = postId;
         this.likesCount = 0;
-        this.id = id;
         this.postContent = postContent;
+        this.authorId = authorId;
     }
 
-    @Override
     public void like() {
-        ++this.likesCount;
+        this.likesCount++;
     }
 
     @Override
-    public int getLikesCount() {
-        return this.likesCount;
+    int getLikesCount() {
+        return likesCount;
     }
 }

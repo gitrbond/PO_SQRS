@@ -5,17 +5,17 @@ import Databases.Database;
 
 import java.util.Collection;
 
-public class PostQuerie implements Query<Post> {
-    private final Database<String, Post> database;
+public class PostQuery implements Query<Post> {
+    private final Database<String, Post> postDatabase;
     private final String key;
 
     public PostQuery(Database<String, Post> database, String id) {
-        this.database = database;
+        this.postDatabase = database;
         this.key = id;
     }
 
     @Override
     public Collection<Post> select() {
-        return this.database.select(key);
+        return this.postDatabase.select(key);
     }
 }

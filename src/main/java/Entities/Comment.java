@@ -1,19 +1,24 @@
+package Entities;
+
 public class Comment implements Entity {
+    private final String commentId;
+    private final String authorId;
     private int likesCount;
-    private final String comment;
+    private final String commentContent;
 
-    Comment(String comment) {
+    Comment(String commentId, String commentContent, String authorId) {
+        this.commentId = commentId;
         this.likesCount = 0;
-        this.comment = comment;
+        this.commentContent = commentContent;
+        this.authorId = authorId;
     }
 
-    @Override
     public void like() {
-        ++this.likesCount;
+        this.likesCount++;
     }
 
     @Override
-    public int getLikesCount() {
-        return this.likesCount;
+    int getLikesCount() {
+        return likesCount;
     }
 }
