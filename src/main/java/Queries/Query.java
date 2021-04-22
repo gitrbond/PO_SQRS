@@ -1,4 +1,5 @@
 package Queries;
 
-public class Query {
+public interface Query<T> {
+
 }

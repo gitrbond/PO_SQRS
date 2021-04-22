@@ -18,7 +18,7 @@ public class Post implements Entity {
     }
 
     @Override
-    int getLikesCount() {
+    public int getLikesCount() {
         return likesCount;
     }
 }
